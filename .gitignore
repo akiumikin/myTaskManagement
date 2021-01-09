@@ -1,3 +1,14 @@
+.vagrant
+ubuntu-xenial-16.04-cloudimg-console.log
+mutagen.yml.lock
+
+########################################################
+##
+##  以下はGithubのnode用 ignoreファイル
+##  https://github.com/github/gitignore/blob/master/Node.gitignore
+##
+########################################################
+
 # Logs
 logs
 *.log
