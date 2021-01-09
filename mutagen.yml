@@ -1,0 +1,11 @@
+sync:
+  app:
+    mode: "two-way-resolved"
+    alpha: "./"
+    beta: "frontcomponent:/home/vagrant/front_component"
+    ignore:
+      vcs: true
+      paths:
+        - "front/node_modules/"
+        - "/log"
+        - "/tmp"

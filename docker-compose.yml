@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  front:
+    build: .
+    image: front_component:1.0
+    container_name: front_component
+    tty: true
+    stdin_open: true
+    ports:
+      - "8000:8000"
+    environment: {}
+    volumes:
+      - .:/var/www/front_component
+      - node_modules:/var/www/front_component/src/node_modules
+    # command: "bash -c 'cd src && npm i && npm run watch'"
+
+volumes:
+  node_modules:
+    driver: 'local'
