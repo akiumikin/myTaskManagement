@@ -9,7 +9,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$|\.ts?$/,
+        test: /\.tsx?$|\.ts?$|\.js$/,
         use: [{
           loader: 'ts-loader',
         }],
@@ -24,7 +24,7 @@ module.exports = {
     alias: {
       tsRoot: path.resolve('./src/typescripts'),
     },
-    extensions: ['.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
