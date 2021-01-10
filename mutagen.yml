@@ -6,6 +6,5 @@ sync:
     ignore:
       vcs: true
       paths:
-        - "front/node_modules/"
         - "/log"
         - "/tmp"
