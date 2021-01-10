@@ -9,6 +9,6 @@ module.exports = merge(common, {
     port: 8000,
     disableHostCheck: true,
     historyApiFallback: true,
-    contentBase: './dist'
+    contentBase: './docs'
   }
 });
