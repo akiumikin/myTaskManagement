@@ -7,6 +7,8 @@ const htmlPlugin = new HtmlWebpackPlugin({
   filename: "index.html"
 });
 
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
 module.exports = {
   entry: './src/typescripts/index.tsx',
   plugins: [
@@ -40,6 +42,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './docs'),
+    publicPath: ASSET_PATH,
     filename: 'index.js',
   },
 };
