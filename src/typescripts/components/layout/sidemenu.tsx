@@ -1,62 +1,31 @@
 import React from 'react';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
+import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InputIcon from '@material-ui/icons/Input';
-import PersonIcon from '@material-ui/icons/Person';
-
-function ListItemLink(props: ListItemProps<'a', { button?: true }>) {
-  return <ListItem button component="a" {...props} />;
-}
-
-interface MainListItemProps extends SubListItemProps {
-  icon: React.ReactNode
-}
-
-function MainListItem(props: MainListItemProps) {
-  return(
-    <ListItemLink href={props.to}>
-      <ListItem button style={{paddingTop: 0, paddingBottom: 0}}>
-        <ListItemIcon>{props.icon}</ListItemIcon>
-        <ListItemText primary={props.title}/>
-      </ListItem>
-    </ListItemLink>
-  )
-}
-
-interface SubListItemProps {
-  to: string
-  title: string
-}
-
-function SubListItem(props: SubListItemProps) {
-  return(
-    <ListItemLink href={props.to} style={{paddingTop: 0, paddingBottom: 0}}>
-      <ListItem button style={{paddingTop: 0, paddingBottom: 0}}>
-        <ListItemText secondary={props.title} style={{marginLeft: 70}}/>
-      </ListItem>
-    </ListItemLink>
-  )
-}
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
 
 export function Sidemenu() {
   return (
     <>
       <List>
-        <MainListItem to='/' title='about' icon={<PersonIcon/>}/>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
       </List>
       <Divider />
       <List>
-        <MainListItem to='/form' title='input form' icon={<InputIcon/>}/>
-        <SubListItem to='/form/text' title='text'/>
-        <SubListItem to='/form/radio' title='radio'/>
-        <SubListItem to='/form/checkbox' title='checkbox'/>
-      </List>
-      <Divider />
-      <List>
-        <MainListItem to='/' title='about' icon={<PersonIcon/>}/>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
       </List>
     </>
   );
