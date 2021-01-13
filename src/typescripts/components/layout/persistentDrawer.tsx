@@ -111,7 +111,7 @@ export function PersistentDrawerLeft(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Persistent drawer
+            React Component Study
           </Typography>
         </Toolbar>
       </AppBar>

@@ -50,13 +50,13 @@ export function Sidemenu() {
       <Divider />
       <List>
         <MainListItem to='/form' title='input form' icon={<InputIcon/>}/>
-        <SubListItem to='/form/text' title='text'/>
-        <SubListItem to='/form/radio' title='radio'/>
-        <SubListItem to='/form/checkbox' title='checkbox'/>
+        <SubListItem to='/text' title='text'/>
+        <SubListItem to='/radio' title='radio'/>
+        <SubListItem to='/checkbox' title='checkbox'/>
       </List>
       <Divider />
       <List>
-        <MainListItem to='/' title='about' icon={<PersonIcon/>}/>
+        <MainListItem to='/others' title='others content' icon={<PersonIcon/>}/>
       </List>
     </>
   );
