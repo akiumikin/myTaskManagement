@@ -10,3 +10,8 @@
 
 このコンポーネントを利用するサービスにはpackage.jsonがあるという前提となります。  
 package.jsonの中にてdependencyを用いて、所定のディレクトリ名で引用して活用することを想定しています。
+
+# DEMOページ
+
+github-pagesで作成したコンテンツにアクセスできるようにしていきます。  
+akiumikin.github.io/frontcomponent/
