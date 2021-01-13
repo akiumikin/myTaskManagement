@@ -15,3 +15,4 @@ package.jsonの中にてdependencyを用いて、所定のディレクトリ名�
 
 github-pagesで作成したコンテンツにアクセスできるようにしていきます。  
 akiumikin.github.io/frontcomponent/
+
