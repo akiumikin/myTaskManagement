@@ -2,6 +2,7 @@
   "name": "front_component",
   "version": "1.0.0",
   "description": "複数のサービス間にて共通のComponentを利用していくケースに関しての知見をまとめるためのリポジトリとなります。   想定環境としては下記の使用可能な環境を想定しています。",
+  "homepage": "https://akiumikin.github.io/frontComponent",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
