@@ -1,4 +1,5 @@
 import React from 'react';
+import { CONSTANT } from 'tsRoot/constant'
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
@@ -17,7 +18,7 @@ interface MainListItemProps extends SubListItemProps {
 
 function MainListItem(props: MainListItemProps) {
   return(
-    <ListItemLink href={props.to}>
+    <ListItemLink href={`/${CONSTANT.REPOSITRY_NAME}${props.to}`}>
       <ListItem button style={{paddingTop: 0, paddingBottom: 0}}>
         <ListItemIcon>{props.icon}</ListItemIcon>
         <ListItemText primary={props.title}/>
@@ -33,7 +34,7 @@ interface SubListItemProps {
 
 function SubListItem(props: SubListItemProps) {
   return(
-    <ListItemLink href={props.to} style={{paddingTop: 0, paddingBottom: 0}}>
+    <ListItemLink href={`/${CONSTANT.REPOSITRY_NAME}${props.to}`} style={{paddingTop: 0, paddingBottom: 0}}>
       <ListItem button style={{paddingTop: 0, paddingBottom: 0}}>
         <ListItemText secondary={props.title} style={{marginLeft: 70}}/>
       </ListItem>
