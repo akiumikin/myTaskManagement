@@ -8,8 +8,8 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "8000:8000"
+      - "3000:3000"
     environment: {}
     volumes:
       - .:/var/www/front_component
-    command: "bash -c 'npm i && npm run watch'"
+    # command: "bash -c 'npm i && npm run dev'"
