@@ -4,7 +4,7 @@ Vagrant.configure('2') do |config|
   config.vm.hostname = 'frontcomponent'
 
   config.vm.network :private_network, ip: '192.168.60.10'
-  config.vm.network 'forwarded_port', guest: 8000, host: 8000
+  config.vm.network 'forwarded_port', guest: 3000, host: 3000
 
   config.vm.provider :virtualbox do |vb|
     vb.gui = false
