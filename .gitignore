@@ -3,9 +3,6 @@
 ubuntu-xenial-16.04-cloudimg-console.log
 mutagen.yml.lock
 
-# github関連
-.github
-
 ########################################################
 ##
 ##  以下はNext.jsの ignoreファイル
