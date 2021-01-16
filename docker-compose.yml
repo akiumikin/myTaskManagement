@@ -12,4 +12,4 @@ services:
     environment: {}
     volumes:
       - .:/var/www/front_component
-    # command: "bash -c 'npm i && npm run dev'"
+    command: "bash -c 'npm i && npm run dev'"
