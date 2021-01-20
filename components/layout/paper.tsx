@@ -6,30 +6,6 @@ interface Props {
   children: React.ReactNode
 }
 
-// https://ryotarch.com/javascript/react/get-window-size-with-react-hooks/
-export const useWindowDimensions = () => {
-  const isClient = typeof window === 'object';
-
-  const getWindowDimensions = React.useCallback(() => {
-    return {
-      width: isClient ? window?.innerWidth : 0,
-      height: isClient ? window?.innerHeight : 0
-    };
-  }, [isClient]);
-
-  const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions());
-
-  React.useEffect(() => {
-    const onResize = () => {
-      setWindowDimensions(getWindowDimensions());
-    };
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, [getWindowDimensions]);
-
-  return windowDimensions;
-};
-
 export default function Paper(props: Props) {
   return(
     <>
@@ -49,7 +25,7 @@ export default function Paper(props: Props) {
 
       {/* 携帯 */}
       <Hidden smUp>
-        <PaperBase.default style={{padding: '15px 5%', margin: '20px auto 20px auto', width: useWindowDimensions().width * 0.9}}>
+        <PaperBase.default style={{padding: '15px 5%', margin: '20px auto 20px auto', width: '95%', minWidth: 400}}>
           {props.children}
         </PaperBase.default>
       </Hidden>
