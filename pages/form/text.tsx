@@ -11,6 +11,8 @@ import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+import TextFieldComponentCode from '../../components/code/form/textFieldComponent'
+
 export default function Text() {
 
   const [sample, setSample] = React.useState({basic_text1: '', basic_text2: '', basic_text3: ''})
@@ -27,7 +29,7 @@ export default function Text() {
 
         <Divider light style={{marginBottom: 10}}/>
 
-        <Typography variant="subtitle1" gutterBottom>【material-ui】</Typography>
+        <Typography variant='subtitle1' gutterBottom>【material-ui】</Typography>
         <ChipList
           chipItems={[
             {
@@ -147,10 +149,8 @@ export default function Text() {
           >
             <Typography>デモコード</Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              工事中
-            </Typography>
+          <AccordionDetails style={{display: 'block'}}>
+            <TextFieldComponentCode/>
           </AccordionDetails>
         </Accordion>
         <Accordion>
