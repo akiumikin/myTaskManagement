@@ -25,7 +25,7 @@ export default function Paper(props: Props) {
 
       {/* 携帯 */}
       <Hidden smUp>
-        <PaperBase.default style={{padding: 15, margin: '20px auto 20px auto', width: 600, maxWidth: '90%'}}>
+        <PaperBase.default style={{padding: 15, margin: '20px auto 20px auto', width: '90%'}}>
           {props.children}
         </PaperBase.default>
       </Hidden>
