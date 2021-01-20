@@ -8,7 +8,7 @@ export default function AboutIndex() {
   return(
     <>
       <Paper>
-        <Typography variant='h6' gutterBottom>このページに関して</Typography>
+        <Typography variant='h5' gutterBottom>このページに関して</Typography>
         <Typography variant='body1' gutterBottom>
           React + Material-UI を用いて作成したコンポーネントのサンプルページです。
           自社サービスで利用したノウハウなどを集約した学習ページにしていくことが目的です。<br/>
@@ -18,7 +18,7 @@ export default function AboutIndex() {
       </Paper>
 
       <Paper>
-        <Typography variant='h6' gutterBottom>Github</Typography>
+        <Typography variant='h5' gutterBottom>Github</Typography>
         <Typography variant='body1' gutterBottom>
           <Link href="https://github.com/akiumikin/frontComponent">https://github.com/akiumikin/frontComponent</Link>
         </Typography>
@@ -40,7 +40,7 @@ export default function AboutIndex() {
       </Paper>
 
       <Paper>
-        <Typography variant='h6' gutterBottom>作者</Typography>
+        <Typography variant='h5' gutterBottom>作者</Typography>
         <a href="https://github.com/anuraghazra/github-readme-stats">
           <img className={Style.githubStats} src="https://github-readme-stats.vercel.app/api?username=akiumikin&count_private=true&show_icons=true" />
         </a>
