@@ -1,3 +1,18 @@
 .chipList {
   margin-left: 15px;
 }
+
+.prismTitle {
+  background: #464646;
+  font-size: 90%;
+  font-weight: bold !important;
+  display: inline-block;
+  color: #dcdcdc;
+  letter-spacing: 0.1em;
+  margin: 0px 0px;
+  padding: 3px 15px 3px 15px;
+  border-radius: 1px 5px 0px 0px;
+  position: relative;
+  top: 7px;
+  z-index: 100;
+}
