@@ -49,7 +49,7 @@ export default function Paper(props: Props) {
 
       {/* 携帯 */}
       <Hidden smUp>
-        <PaperBase.default style={{padding: 15, margin: '20px auto 20px auto', width: useWindowDimensions().width}}>
+        <PaperBase.default style={{padding: 15, margin: '20px auto 20px auto', width: useWindowDimensions().width * 0.9}}>
           {props.children}
         </PaperBase.default>
       </Hidden>
