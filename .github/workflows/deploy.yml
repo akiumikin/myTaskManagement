@@ -19,7 +19,7 @@ jobs:
         run: |
           npm run export
         env:
-          GITHUB_PAGES: true
+          NEXT_PUBLIC_LOCAL: false
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
