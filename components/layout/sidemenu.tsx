@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { CONSTANT } from '../../constant'
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -42,18 +43,18 @@ export function Sidemenu() {
   return (
     <>
       <List>
-        <MainListItem to='/about' title='about' icon={<PersonIcon/>}/>
+        <MainListItem to={`${CONSTANT.URL.BASE}/about`} title='about' icon={<PersonIcon/>}/>
       </List>
       <Divider />
       <List>
-        <MainListItem to='/form' title='input form' icon={<InputIcon/>}/>
-        <SubListItem to='/form/text' title='text'/>
-        <SubListItem to='/form/radio' title='radio'/>
-        <SubListItem to='/form/checkbox' title='checkbox'/>
+        <MainListItem to={`${CONSTANT.URL.BASE}/form`} title='input form' icon={<InputIcon/>}/>
+        <SubListItem to={`${CONSTANT.URL.BASE}/form/text`} title='text'/>
+        <SubListItem to={`${CONSTANT.URL.BASE}/form/radio`} title='radio'/>
+        <SubListItem to={`${CONSTANT.URL.BASE}/form/checkbox`} title='checkbox'/>
       </List>
       <Divider />
       <List>
-        <MainListItem to='/others' title='others content' icon={<PersonIcon/>}/>
+        <MainListItem to={`${CONSTANT.URL.BASE}/others`} title='others content' icon={<PersonIcon/>}/>
       </List>
     </>
   );
