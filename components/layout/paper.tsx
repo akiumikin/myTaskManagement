@@ -42,14 +42,14 @@ export default function Paper(props: Props) {
 
       {/* タブレット */}
       <Hidden mdUp xsDown>
-        <PaperBase.default style={{padding: 20, margin: '30px auto 30px auto', width: 600, maxWidth: '90%'}}>
+        <PaperBase.default style={{padding: '20px 5%', margin: '30px auto 30px auto', width: 600, maxWidth: '90%'}}>
           {props.children}
         </PaperBase.default>
       </Hidden>
 
       {/* 携帯 */}
       <Hidden smUp>
-        <PaperBase.default style={{padding: 15, margin: '20px auto 20px auto', width: useWindowDimensions().width * 0.9}}>
+        <PaperBase.default style={{padding: '15px 5%', margin: '20px auto 20px auto', width: useWindowDimensions().width * 0.9}}>
           {props.children}
         </PaperBase.default>
       </Hidden>
