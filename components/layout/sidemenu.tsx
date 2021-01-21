@@ -8,6 +8,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InputIcon from '@material-ui/icons/Input';
 import PersonIcon from '@material-ui/icons/Person';
+import CategoryIcon from '@material-ui/icons/Category';
 
 interface MainListItemProps extends SubListItemProps {
   icon: React.ReactNode
@@ -54,7 +55,9 @@ export function Sidemenu() {
       </List>
       <Divider />
       <List>
-        <MainListItem to={`${CONSTANT.URL.BASE}/others`} title='others content' icon={<PersonIcon/>}/>
+        <MainListItem to={`${CONSTANT.URL.BASE}/others`} title='others content' icon={<CategoryIcon/>}/>
+        <SubListItem to={`${CONSTANT.URL.BASE}/others/prismjs`} title='prism.js'/>
+        <SubListItem to={`${CONSTANT.URL.BASE}/others/avoidSSR`} title='avoid SSR'/>
       </List>
     </>
   );
