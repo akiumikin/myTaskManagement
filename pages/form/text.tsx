@@ -3,6 +3,7 @@ import TextForm from '../../core/form/textForm';
 import Paper from '../../components/layout/paper';
 import GridForSample from '../../components/layout/gridForSample';
 import ChipList from '../../components/chip/chipList';
+import TextFieldComponentCode from '../../components/code/form/textFieldComponent'
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -10,8 +11,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
-import TextFieldComponentCode from '../../components/code/form/textFieldComponent'
 
 export default function Text() {
 
