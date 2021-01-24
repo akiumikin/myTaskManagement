@@ -43,7 +43,6 @@ export default function TextFieldComponentValidationCode() {
     <AvoidSSRCodeBase
       code={codeText}
       language='tsx'
-      fileName='core/form/textForm.tsx'
     />
   )
 }
