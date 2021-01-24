@@ -39,7 +39,6 @@ export default function TextFieldComponentOnChangeOnBlurCode() {
     <AvoidSSRCodeBase
       code={codeText}
       language='tsx'
-      fileName='core/form/textForm.tsx'
     />
   )
 }
