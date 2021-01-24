@@ -5,7 +5,6 @@ import GridForSample from '../../components/layout/gridForSample';
 import ChipList from '../../components/chip/chipList';
 import TextFieldComponentCode from '../../components/code/form/textFieldComponent'
 import SampleData from '../../types/sampleData'
-import { invalidMessages } from '../../validator/validatorBase'
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -75,11 +74,6 @@ export default function Text() {
             {
               id: 'top_typescript_class',
               label: "TypeScript Class",
-              color: "secondary",
-            },
-            {
-              id: 'top_material_icons',
-              label: "material icons",
               color: "secondary",
             },
           ]}
@@ -196,8 +190,8 @@ export default function Text() {
               label={dataBase.telephoneNumberDetail().displayName}
               placeholder={dataBase.telephoneNumberDetail().placeholder}
               keyName={dataBase.telephoneNumberDetail().keyName}
-              state={sample}
-              setState={setSample}
+              state={data}
+              setState={setData}
               helperText='半角・全角の数字及びハイフンが入力可能、初回のエラー判定はonBlurで判定されそれ以降はOnChangeで判定されます'
               validateMethod={dataBase.telephoneNumberDetail().validateMethod}
             />
