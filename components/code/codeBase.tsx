@@ -7,7 +7,7 @@ import "prismjs/themes/prism-tomorrow.css";
 interface Props {
   code: string
   language: string
-  fileName: string
+  fileName?: string
 }
 
 export default function CodeBase(props: Props) {
@@ -15,10 +15,10 @@ export default function CodeBase(props: Props) {
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);
-  
+
   return(
     <>
-      <p className={Style.prismTitle}>{props.fileName}</p>
+      {props.fileName ? <p className={Style.prismTitle}>{props.fileName}</p> : <></>}
       <pre style={{width: '100%'}}>
         <code className={`language-${props.language}`}>
           {props.code}

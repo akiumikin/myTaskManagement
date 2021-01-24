@@ -56,6 +56,7 @@ export function Sidemenu() {
       <Divider />
       <List>
         <MainListItem to={`${CONSTANT.URL.BASE}/others`} title='others content' icon={<CategoryIcon/>}/>
+        <SubListItem to={`${CONSTANT.URL.BASE}/others/validation`} title='validation'/>
         <SubListItem to={`${CONSTANT.URL.BASE}/others/avoidSSR`} title='avoid SSR'/>
         <SubListItem to={`${CONSTANT.URL.BASE}/others/prismjs`} title='prism.js'/>
         <SubListItem to={`${CONSTANT.URL.BASE}/others/quill`} title='quill'/>
