@@ -2,7 +2,7 @@ import * as React from "react";
 import dynamic from "next/dynamic";
 
 const AvoidSSRCodeBase = dynamic(
-  () => import('../codeBase'), 
+  () => import('../codeBase'),
   {ssr: false}
 )
 
@@ -24,7 +24,7 @@ export default function TextForm(props: TextFieldProps & Props) {
   const alreadyChange = React.useRef(false)
   const alreadyBlur = React.useRef(false)
 
-  // onChangeでpropsを更新すると再レンダリングの範囲が広くなるので、コンポーネントないのvalueのみ更新する
+  // onChangeでpropsを更新すると再レンダリングの範囲が広くなるので、コンポーネント内のvalueのみ更新する
   const onChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     if(props.onChange != undefined) props.onChange(event)
 
@@ -80,12 +80,12 @@ export default function TextForm(props: TextFieldProps & Props) {
 }
 `
 
-export default function TextFieldComponentCode() {  
+export default function TextFieldComponentCode() {
   return(
     <AvoidSSRCodeBase
       code={codeText}
       language='tsx'
-      fileName='form/textForm.tsx'
+      fileName='core/form/textForm.tsx'
     />
   )
 }
