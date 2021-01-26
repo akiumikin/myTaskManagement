@@ -1,10 +1,6 @@
 import * as React from "react";
-import dynamic from "next/dynamic";
-
-const AvoidSSRCodeBase = dynamic(
-  () => import('../codeBase'),
-  {ssr: false}
-)
+import CodeBase from '../codeBase';
+import NoSsr from '@material-ui/core/NoSsr';
 
 // core/form/textformのコード
 const codeText = `
@@ -18,9 +14,11 @@ interface Props {
 
 export default function TextFieldComponentPropsCode() {
   return(
-    <AvoidSSRCodeBase
-      code={codeText}
-      language='tsx'
-    />
+    <NoSsr>
+      <CodeBase
+        code={codeText}
+        language='tsx'
+      />
+    </NoSsr>
   )
 }
