@@ -25,7 +25,7 @@ export default function TextComponent() {
       <Paper>
         <Typography variant='h5' gutterBottom>コンポーネント構成</Typography>
         <GridForSample>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={4}>
             <TextForm
               id='basic_text1'
               label='Outlined'
@@ -35,7 +35,7 @@ export default function TextComponent() {
               setState={setSample}
             />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={4}>
             <TextForm
               id='basic_text2'
               label='Standard'
@@ -46,7 +46,7 @@ export default function TextComponent() {
               setState={setSample}
             />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={4}>
             <TextForm
               id='basic_text3'
               label='Filled'

@@ -10,7 +10,7 @@ const App = ({Component, pageProps}: AppProps) => {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
-  
+
   return (
     <PersistentDrawerLeft
       sidemenu={<Sidemenu/>}
