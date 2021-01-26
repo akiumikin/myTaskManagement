@@ -33,7 +33,7 @@ export default function TextForm(props: TextFieldProps & Props) {
 
   const helperTextWithErrorMessage = () => {
     const enableErrorChack = alreadyChange.current && alreadyBlur.current
-    const errorMessages = enableErrorChack ? props.validateMethod(value[props.keyName]) : undefined
+    const errorMessages = enableErrorChack && props.validateMethod ? props.validateMethod(value[props.keyName]) : undefined
 
     return (
       <>
