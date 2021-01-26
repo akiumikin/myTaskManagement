@@ -11,15 +11,24 @@ interface Props {
 }
 
 export default function CodeBase(props: Props) {
+  const [width, setWidth] = React.useState(0);
 
   React.useEffect(() => {
     Prism.highlightAll();
+
+    if(window.innerWidth < 600) {
+      setWidth(window.innerWidth * 0.7) // スマホサイズ
+    } else if(window.innerWidth < 960) {
+      setWidth(450) // タブレットサイズ
+    } else {
+      setWidth(700) // PC
+    }
   }, []);
 
   return(
     <>
       {props.fileName ? <p className={Style.prismTitle}>{props.fileName}</p> : <></>}
-      <pre style={{width: '100%'}}>
+      <pre style={{width: width, margin: '0 auto'}}>
         <code className={`language-${props.language}`}>
           {props.code}
         </code>

@@ -15,7 +15,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 export default function Text() {
 
-  const [sample, setSample] = React.useState({basic_text1: '', basic_text2: '', basic_text3: ''})
   const dataBase = new SampleData
   const [data, setData] = React.useState(new SampleData)
 
