@@ -38,6 +38,7 @@ export default function TextForm(props: TextFieldProps & Props) {
     return (
       <>
         {props.helperText ? props.helperText : <></>}
+        {props.helperText && errorMessages ? <br/> : <></>}
         {errorMessages ? errorMessages.map((message, idx) => {
           return (
             <span key={`validation_message_${props.keyName}_${idx}`} style={{color: '#f44336'}}>
