@@ -11,9 +11,6 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 export default function TextComponent() {
@@ -126,20 +123,6 @@ export default function TextComponent() {
             <Typography>他にも、上位コンポーネントからのpropsが渡されているかを確認して、渡されていなかった時の値（＝デフォルト値）の設定をしています。</Typography>
             <Typography>onChangeとOnBlurに関しては、上位のコンポーネントから渡されても独自の関数が入っているので無視される構成です。onChangeとonBlurの関数の処理の中でpropsを引き継げば実行も可能ですが、特に用途が見つからなかったため無視する構成としています。</Typography>
             <TextFieldComponentValidationCode/>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>参考リンク</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              工事中
-            </Typography>
           </AccordionDetails>
         </Accordion>
       </Paper>
