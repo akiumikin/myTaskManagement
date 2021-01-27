@@ -17,7 +17,7 @@ export default function CodeBase(props: Props) {
     Prism.highlightAll();
 
     if(window.innerWidth < 600) {
-      setWidth(window.innerWidth * 0.7) // スマホサイズ
+      setWidth(window.innerWidth * 0.75) // スマホサイズ
     } else if(window.innerWidth < 960) {
       setWidth(450) // タブレットサイズ
     } else {

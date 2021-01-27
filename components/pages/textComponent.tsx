@@ -101,25 +101,15 @@ export default function TextComponent() {
           </AccordionSummary>
           <AccordionDetails style={{display: 'block'}}>
             <Typography variant='h6' gutterBottom>引数</Typography>
-            <Typography>このコンポーネントは下記の引数を持ちます。</Typography>
-            <List>
-              <ListItem>
-                <Typography variant='subtitle1'>keyName：</Typography>
-                <ListItemText>更新すべきプロパティの特定で使用します。</ListItemText>
-              </ListItem>
-              <ListItem>
-                <Typography variant='subtitle1'>state：</Typography>
-                <ListItemText>TypeScriptで定義されたclassを使って作成したstateが入ります。classは複数のプロパティを持ちデータベースの1テーブルや1画面のフォームの要素など用途のまとまったプロパティを持つ想定です。</ListItemText>
-              </ListItem>
-              <ListItem>
-                <Typography variant='subtitle1'>setState：</Typography>
-                <ListItemText>stateと合わせて定義されたsetStateです。</ListItemText>
-              </ListItem>
-              <ListItem>
-                <Typography variant='subtitle1'>validationMethod：</Typography>
-                <ListItemText>リアルタイムバリデーションに使用する関数です。この関数は引数に value: any を受け取り、エラーがあった際には string[] を返す想定です。この関数をonBlur及びonChangeの画面の再レンダリングの際に実行してエラーメッセージの表示を行います。</ListItemText>
-              </ListItem>
-            </List>
+            <Typography gutterBottom>このコンポーネントは下記の引数を持ちます。</Typography>
+            <Typography variant='subtitle1'>keyName</Typography>
+            <Typography style={{marginLeft: 20}} gutterBottom>更新すべきプロパティの特定で使用します。</Typography>
+            <Typography variant='subtitle1'>state</Typography>
+            <Typography style={{marginLeft: 20}} gutterBottom>TypeScriptで定義されたclassを使って作成したstateが入ります。classは複数のプロパティを持ちデータベースの1テーブルや1画面のフォームの要素など用途のまとまったプロパティを持つ想定です。</Typography>
+            <Typography variant='subtitle1'>setState</Typography>
+            <Typography style={{marginLeft: 20}} gutterBottom>stateと合わせて定義されたsetStateです。</Typography>
+            <Typography variant='subtitle1'>validationMethod</Typography>
+            <Typography style={{marginLeft: 20}} gutterBottom>リアルタイムバリデーションに使用する関数です。この関数は引数に value: any を受け取り、エラーがあった際には string[] を返す想定です。この関数をonBlur及びonChangeの画面の再レンダリングの際に実行してエラーメッセージの表示を行います。</Typography>
             <TextFieldComponentPropsCode/>
             <Typography variant='h6' gutterBottom style={{marginTop: 40}}>state更新</Typography>
             <Typography>このコンポーネントではpropsで受け取ったstateとコンポーネント内で定義したstate(value)が存在します。その理由としては、propsを常時onChangeにて更新すると上位のコンポーネントでも再レンダリングが発生するため、フォームの入力中はフォームで使用したstateを利用してレンダリング範囲を狭めています。</Typography>

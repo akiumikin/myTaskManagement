@@ -16,3 +16,32 @@
   top: 7px;
   z-index: 100;
 }
+
+@media screen and (max-width: 599px) {
+  /*　スマホ向け　*/
+  .paper {
+    padding: 15px 4%;
+    margin: 0 auto 30px auto;
+    width: 100%;
+    min-width: 400px;
+  }
+}
+
+@media screen and (min-width: 600px) and ( max-width: 959px) {
+  /*　タブレット向け　*/
+  .paper {
+    padding: 20px 5%;
+    margin: 30px auto;
+    width: 600px;
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  /*　PC向け　*/
+  .paper {
+    padding: 20px;
+    margin: 30px auto;
+    width: 800px;
+  }
+}
