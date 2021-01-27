@@ -33,6 +33,7 @@ export default function Text() {
           <Grid item xs={12} sm={6}>
             <TextForm
               id={dataBase.telephoneNumberDetail().keyName}
+              type='tel'
               label={dataBase.telephoneNumberDetail().displayName}
               placeholder={dataBase.telephoneNumberDetail().placeholder}
               keyName={dataBase.telephoneNumberDetail().keyName}
