@@ -20,6 +20,9 @@ export default function TextForm(props: TextFieldProps & Props) {
   const alreadyChange = React.useRef(false)
   const alreadyBlur = React.useRef(false)
 
+  const enableErrorChack = alreadyChange.current && alreadyBlur.current
+  const errorMessages = enableErrorChack && props.validateMethod ? props.validateMethod(value[props.keyName]) : []
+
   // onChangeでpropsを更新すると再レンダリングの範囲が広くなるので、コンポーネント内のvalueのみ更新する
   const onChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     if(props.onChange != undefined) props.onChange(event)
@@ -70,6 +73,7 @@ export default function TextForm(props: TextFieldProps & Props) {
       onChange={onChange}
       onBlur={onBlur}
       helperText={helperTextWithErrorMessage()}
+      error={props.error == undefined ? errorMessages.length != 0 : props.error}
       fullWidth={props.fullWidth == undefined ? true : props.fullWidth}
       variant={props.variant == undefined ? 'outlined' : props.variant}
     />

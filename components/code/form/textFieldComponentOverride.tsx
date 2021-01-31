@@ -20,6 +20,7 @@ export default function TextForm(props: TextFieldProps & Props) {
       onChange={onChange}
       onBlur={onBlur}
       helperText={helperTextWithErrorMessage()}
+      error={props.error == undefined ? errorMessages.length != 0 : props.error}
       fullWidth={props.fullWidth == undefined ? true : props.fullWidth}
       variant={props.variant == undefined ? 'outlined' : props.variant}
     />

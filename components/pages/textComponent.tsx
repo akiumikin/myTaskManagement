@@ -6,6 +6,7 @@ import TextFieldComponentCode from '../code/form/textFieldComponent';
 import TextFieldComponentPropsCode from '../code/form/textFieldComponentProps';
 import TextFieldComponentOnChangeOnBlurCode from "../code/form/textFieldComponentOnChangeOnBlur";
 import TextFieldComponentValidationCode from "../code/form/textFieldComponentValidation";
+import TextFieldComponentOverride from "../code/form/textFieldComponentOverride";
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -122,7 +123,7 @@ export default function TextComponent() {
             <Typography>引数の型を TextFieldProps & Props としているため、Material-UIのPropsと独自のPropsの和集合がこのコンポーネントのPropsとなります。しかしそのままMaterial-UIにコンポーネントのPropsを渡すとエラーとなるため、呼び出しの直前でコンポーネントのPropsから独自のPropsを除外しています。</Typography>
             <Typography>他にも、上位コンポーネントからのpropsが渡されているかを確認して、渡されていなかった時の値（＝デフォルト値）の設定をしています。</Typography>
             <Typography>onChangeとOnBlurに関しては、上位のコンポーネントから渡されても独自の関数が入っているので無視される構成です。onChangeとonBlurの関数の処理の中でpropsを引き継げば実行も可能ですが、特に用途が見つからなかったため無視する構成としています。</Typography>
-            <TextFieldComponentValidationCode/>
+            <TextFieldComponentOverride/>
           </AccordionDetails>
         </Accordion>
       </Paper>
