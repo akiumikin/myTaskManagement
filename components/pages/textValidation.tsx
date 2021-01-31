@@ -3,6 +3,7 @@ import TextForm from '../../core/form/textForm';
 import Paper from '../../components/layout/paper';
 import GridForSample from '../../components/layout/gridForSample';
 import TextFieldComponentCode from '../../components/code/form/textFieldComponent';
+import { TextFieldComponentValidationDemoImportCode, TextFieldComponentValidationDemoCallCode } from '../../components/code/form/textFieldComponentValidationDemo'
 import SampleData from '../../types/sampleData';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -28,7 +29,6 @@ export default function TextValidation() {
               keyName={dataBase.freeTextMax5Detail().keyName}
               state={data}
               setState={setData}
-              helperText='初回のエラー判定はonBlurで判定されそれ以降はOnChangeで判定されます'
               validateMethod={dataBase.freeTextMax5Detail().validateMethod}
             />
           </Grid>
@@ -39,59 +39,17 @@ export default function TextValidation() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>概要</Typography>
+            <Typography>デモコードおよび解説</Typography>
           </AccordionSummary>
           <AccordionDetails style={{display: 'block'}}>
-            <Typography>
-              Material-UIの<a href='https://material-ui.com/components/text-fields/' rel='noopener' target='_blank'>Text Field</a>をラップしたコンポーネントを作成しています。
-              ラップの目的としては下記の機能を組み込むためです。
+            <Typography gutterBottom>
+              まず、コンポーネントの構成の項目で記載したコンポーネント及び利用するサンプルデータのデータ型のimportを行います。
             </Typography>
-            <ol>
-              <li>デフォルトのvalientの変更（Standerd → Outliend）など独自スタイルの適用</li>
-              <li>TypeScriptのClassを使ったstateのプロパティの更新</li>
-              <li>リアルタイムバリデーション機能の組み込み</li>
-            </ol>
-            <Typography>詳細はデモコードの解説をご覧ください。</Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>デモコード</Typography>
-          </AccordionSummary>
-          <AccordionDetails style={{display: 'block'}}>
-            <TextFieldComponentCode/>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>デモコードの解説</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              工事中
+            <TextFieldComponentValidationDemoImportCode/>
+            <Typography gutterBottom style={{marginTop: 20}}>
+              コンポーネントの呼び出し時に、validateMethodを指定することでonBlur・onChangeの際にエラーの判定を行います。validateMethodは引数としてフォームの入力値を受けてstringの配列を返す構造を想定しています。詳しくはメニューのvalidationの項目を参照ください。
             </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>参考リンク</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              工事中
-            </Typography>
+            <TextFieldComponentValidationDemoCallCode/>
           </AccordionDetails>
         </Accordion>
       </Paper>

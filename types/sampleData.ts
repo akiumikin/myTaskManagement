@@ -15,7 +15,7 @@ export default class SampleData {
       keyName: 'freeTextMax5',
       displayName: 'フリーテキスト',
       validateMethod: validateMethod({ lengthMax: 5 }),
-      placeholder: '5文字以内の入力のみ可能'
+      placeholder: '5文字以内の入力のみ可能、初回の判定はonBlurの際に行われます。'
     })
   }
 
